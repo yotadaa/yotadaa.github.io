@@ -10,7 +10,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Calibri;
+}
+
+.container {
+    padding-right: 5px;
+    padding-left: 10px;
+    border: 10px transparent;
+}
+
+.container p {
+    margin-right: 0;
+    text-align: justify;
+    margin: 20px;
 }
 
 .topnav {
@@ -34,6 +46,7 @@ body {
 }
 
 .topnav a.active {
+  text-align: left;
   background-color: white;
   color: #A76F6F;
 }
@@ -41,6 +54,11 @@ body {
 .topnav .icon {
   display: none;
 }
+.menu-drop {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 
 @keyframes slowly-widen {
     100% {width: 100%;}

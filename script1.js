@@ -1,4 +1,5 @@
 var menuIcon = document.querySelector(".topnav .icon");
+var topnav = document.querySelector(".topnav a")
     var active = document.querySelector(".active");
     menuIcon.addEventListener("mouseenter", function() {
         if (menuIcon.style.color === "#A76F6F") {
@@ -15,19 +16,19 @@ var menuIcon = document.querySelector(".topnav .icon");
         if (active.className === "active") {
             active.className += " true";
             active.animate([
-                {width: '0'},
-                {width: '100%'}
+                {width: '24%'},
+                {width: '80%'}
             ], {
                 duration: 1000,
                 easing: 'ease-in-out',
                 fill: 'forwards'
             });
-            menuIcon.style.color = "#A76F6F";
+            menuIcon.style.color = "white";
         } else {
             active.className = "active";
             active.animate([
-                {width: '78%'},
-                {width: '25%'}
+                {width: '79%'},
+                {width: '24%'}
             ], {
                 duration: 1000,
                 easing: 'ease-in-out',
@@ -35,7 +36,6 @@ var menuIcon = document.querySelector(".topnav .icon");
             });
             menuIcon.style.color = "white";
         };
-        alert(animating);
     });
 function myFunction() {
   var x = document.getElementById("myTopnav");
