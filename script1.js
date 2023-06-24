@@ -1,5 +1,16 @@
 var menuIcon = document.querySelector(".topnav .icon");
     var active = document.querySelector(".active");
+    menuIcon.addEventListener("mouseenter", function() {
+        if (menuIcon.style.color === "#A76F6F") {
+            menuIcon.style.backgroundColor = "white";
+        } else {
+            menuIcon.style.backgroundColor = "#A76F6F";
+        }
+    });
+    menuIcon.addEventListener("mouseleave", function() {
+        menuIcon.style.backgroundColor = "#2D4356";
+        menuIcon.style.color = "white";
+    });
     menuIcon.addEventListener("click", function() {
         if (active.className === "active") {
             active.className += " true";
@@ -11,6 +22,7 @@ var menuIcon = document.querySelector(".topnav .icon");
                 easing: 'ease-in-out',
                 fill: 'forwards'
             });
+            menuIcon.style.color = "#A76F6F";
         } else {
             active.className = "active";
             active.animate([
@@ -21,6 +33,7 @@ var menuIcon = document.querySelector(".topnav .icon");
                 easing: 'ease-in-out',
                 fill: 'forwards'
             });
+            menuIcon.style.color = "white";
         };
         alert(animating);
     });
