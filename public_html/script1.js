@@ -1,6 +1,52 @@
+var menuIcon = document.querySelector(".topnav .icon");
+    var active = document.querySelector(".active");
+    menuIcon.addEventListener("click", function() {
+        if (active.className === "active") {
+            active.className += " true";
+            active.animate([
+                {width: '0'},
+                {width: '100%'}
+            ], {
+                duration: 1000,
+                easing: 'ease-in-out',
+                fill: 'forwards'
+            });
+        } else {
+            active.className = "active";
+            active.animate([
+                {width: '78%'},
+                {width: '25%'}
+            ], {
+                duration: 1000,
+                easing: 'ease-in-out',
+                fill: 'forwards'
+            });
+        };
+        alert(animating);
+    });
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   var parent = document.getElementById("parent");
   var isPressed = false;
+  
+  // Get the list items
+    var menuItems = document.querySelectorAll('li');
+
+    // Add a click event listener to each menu item
+    menuItems.forEach(function(item) {
+        item.addEventListener('click', function() {
+            this.classList.toggle('active');
+      });
+    });
+
   
   document.addEventListener("mousedown",function(event){
       isPressed = true;
