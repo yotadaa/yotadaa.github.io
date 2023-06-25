@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-css@3.0.1@dist/emoji.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../styles.css">
+<style>
+    p {
+        margin: 15px;
+        text-align: justify;
+        font-family: Calibri;
+        padding: 5px;
+    }
+    h2 {
+        margin-left: 10px;
+    }
+    li {
+        padding:7px;
+    }
+    li a {
+        display: inline-block;
+        background-color: yellow;
+        color: black;
+        text-decoration: none;
+    }
+     #ball {
+      position: absolute;
+      width: 10px;
+      height: 10px;/
+      border-radius: 50%;
+      background-color: red;
+    }
+</style>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav"><strong>
+    <a href="../index.html" onclick="animate()" class="active">METADATA</a>
+  <a href="tutor1.html" onclick="dropTutor()">Sefruit Tutorial</a>
+  <a href="#about">About</a>
+  </strong>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+<h2> CARA BIKIN SEGITIGA </h2>
+<p>
+    Dengan <em>coding</em> kita dapat membuat berbagai hal, contohnya mengolah      karakter huruf atau simbol menjadi bentuk yang diinginkan.<br><br>
+    Bagaimana caranya? tentu saja dengan menggunakan <em>looping</em>. Berikut adalah contoh <strong>cara bikin segitiga</strong> &#x1F976. <br><br><!-- comment -->
+    *****<br>****<br>***<br>**<br>*<br><br> 
+    Coba perhatikan segitiga di atas, coba perhatikan polanya. Apa pola yang dia miliki?<br><br>
+    Pola itu adalah dari atas ke bawah <strong>jumlah bintang</strong>nya berkurang.<br><br>
+    <em>Alright</em>, sekarang kita sudah tau seperti apa polanya, sekarang apa yang harus kita lakukan? Implementasi kode, tapi bagaimana cara menyusunnya? kita gunakan <strong>looping</strong>.<br><br>
+    Hal yang akan dilakukan adalah perulangan di dalam perulangan atau <em>Nested Loop</em>. Perulangan untuk mencetak ke bawah dan perulangan untuk mencetak ke samping.<br><br>
+    Untuk loop yang pertama (yang di luar) akan menghitung secara terbalik atau menurun. Kenapa? karena tadi kita temukan bahwa bintangnya beangsur-angsur berkurang dari atas ke bawah. Jika tinggi segitiganya adalah 10 maka loopingnya dari 10 ke 1.<br><br>
+    <span class="coding-font">for i := 10 downto 1 do <br> atau <br> 
+        for i in reversed(range(10))
+    </span> <br><br>
+    Kemudian, untuk loop kedua (yang di dalam) cukup ambil variabel dari loop luar tetapi dengan orientasi menaik, sehingga <br><br>
+<pre class="coding-font whitespaces">
+ for i := 10 downto 1 do
+ begin
+    for j := 1 <strong>to</strong>i do
+        write('*');
+     writeln();
+ end;
+
+ atau
+
+ for i in reversed(range(10)):
+    for j in range(i):
+        print('*',end=''); 
+     print();
+
+end berfungsi mengatur pemisah antara print yang satu dengan yang lain. end='' berarti tiap print tidak dipisah apa-apa (bersatu), end=' ' berarti tiap print dipisah dengan spasi.
+</pre>
+</p>
+<p>
+Bagaimana untuk segitiga siku-siku yang tidak terbalik? Ya lakukan kebalikan dari langkah di atas. Loop luar secara menaik, loop dalam juga menaik.
+</p>
+
+<pre class='coding-font whitespaces'>
+ Pascal:
+
+ var    t,i,j : byte; // integer;
+ begin
+    //segitiga atas
+    t := 10;
+    for i := 1 to t do
+    begin
+        for j := 1 to i do
+            write('*');
+        writeln();
+    end;
+    writeln();
+    //segitiga bawah
+    for i := t downto 1 do
+    begin
+        for j := 1 to i do
+            write('*');
+        writeln();
+    end;
+    readln();
+ end.       
+</pre>
+</p>
+<p>
+    Hal yang harus dilakukan ketika membuat program adalah memperhatikan polanya.
+</p>
+<br><br>
+<script src="../script.js">
+</script>
+
+</body>
+</html>
