@@ -24,6 +24,23 @@
         color: black;
         text-decoration: none;
     }
+     #ball {
+      position: absolute;
+      width: 10px;
+      height: 10px;/
+      border-radius: 50%;
+      background-color: red;
+    }
+    .bordering {
+        
+    }
+    
+    @media screen and (min-width: 700px) {
+        .bordering {
+            border: 1px;
+            max-width: 850px;
+        }
+    }
 </style>
 </head>
 <body>
@@ -38,9 +55,10 @@
   </a>
 </div>
 <h2> CARA BIKIN SEGITIGA </h2>
+<div class="bordering"> 
 <p>
     Dengan <em>coding</em> kita dapat membuat berbagai hal, contohnya mengolah      karakter huruf atau simbol menjadi bentuk yang diinginkan.<br><br>
-    Bagaimana caranya? Berikut adalah contoh <strong>cara bikin segitiga</strong> &#x1F976. <br><br><!-- comment -->
+    Bagaimana caranya? tentu saja dengan menggunakan <em>looping</em>. Berikut adalah contoh <strong>cara bikin segitiga</strong> &#x1F976. <br><br><!-- comment -->
     *****<br>****<br>***<br>**<br>*<br><br> 
     Coba perhatikan segitiga di atas, coba perhatikan polanya. Apa pola yang dia miliki?<br><br>
     Pola itu adalah dari atas ke bawah <strong>jumlah bintang</strong>nya berkurang.<br><br>
@@ -101,6 +119,7 @@ Bagaimana untuk segitiga siku-siku yang tidak terbalik? Ya lakukan kebalikan dar
 <p>
     Hal yang harus dilakukan ketika membuat program adalah memperhatikan polanya.
 </p>
+</div>
 <br><br>
 <script src="../script.js">
 </script>
